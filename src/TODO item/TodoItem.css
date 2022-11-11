@@ -1,0 +1,53 @@
+:root {
+    --transition: 0.3s;
+
+    --main-color: #ff6600;
+    --main-color-hover: #ff4d00;
+
+    --delete-color: #f8485e;
+    --delete-color-hover: #f82a40;
+
+    --edit-color: #425481;
+    --edit-color-hover: #4660a4;
+}
+
+
+.todo-item {
+    margin: 2rem auto;
+    background-color: rgb(10, 10, 10);
+    padding: 1.4rem;
+    border-radius: 2rem;
+    width: 40rem;
+}
+
+.todo-item > h2 {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.todo-buttons > button {
+    margin: 8px;
+}
+
+.todo-buttons > #done {
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+.todo-buttons > #done:hover {
+    background-color: var(--main-color-hover);
+}
+
+.todo-buttons > #delete {
+    background-color: var(--delete-color);
+    transition: var(--transition);
+}
+.todo-buttons > #delete:hover {
+    background-color: var(--delete-color-hover);
+}
+
+.todo-buttons > #edit {
+    background-color: var(--edit-color);
+    transition: var(--transition);
+}
+.todo-buttons > #edit:hover {
+    background-color: var(--edit-color-hover);
+}

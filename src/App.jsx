@@ -1,32 +1,20 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import TodoItem from './TODO item/TodoItem'
+import CreateItem from './TODO_create_item/CreateItem'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="App-header">
+        <img src={reactLogo} className="App-logo" alt="logo" />
+        <h2>React TODO list</h2>
+        <button>Create new item</button>
+      </header>
+
+      <TodoItem name="Vyklidit mycku" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Quisque porta. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus." />
+      <TodoItem name="Vynest kos" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Quisque porta. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus." />
+      <TodoItem name="Udelat ukol na matiku" description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque pretium lectus id turpis. Quisque porta. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus." />
     </div>
   )
 }
