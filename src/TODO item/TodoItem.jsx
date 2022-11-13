@@ -1,6 +1,19 @@
 import './TodoItem.css'
 
 function TodoItem(props) {
+  console.log('test')
+  function deleteItem(key) {
+    let nameKey = key + 'name'
+    let descriptionKey = key + 'description'
+    let indexKey = key + 'index'
+
+    localStorage.removeItem(nameKey)
+    localStorage.removeItem(descriptionKey)
+    localStorage.removeItem(indexKey)
+
+    props.forceUpdate()
+  }
+
   return (
     <div className="todo-item">
       <h2>{props.name}</h2>
@@ -9,7 +22,7 @@ function TodoItem(props) {
       <div className="todo-buttons">
         <button id="done">Mark done</button>
         <button id="edit">Edit</button>
-        <button id="delete">Delete</button>
+        <button onClick={() => deleteItem(props.itemIndex)} id="delete">Delete</button>
       </div>
     </div>
   )

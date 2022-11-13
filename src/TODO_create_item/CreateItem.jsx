@@ -20,19 +20,20 @@ function CreateItem(props) {
     let itemCount = localStorage.getItem('0')
     let nameKey = itemCount + 'name'
     let descriptionKey = itemCount + 'description'
+    let indexKey = itemCount + 'index'
 
     localStorage.setItem(nameKey, name)
     localStorage.setItem(descriptionKey, description)
+    localStorage.setItem(indexKey, itemCount)
 
     props.editPopup(false);
-    console.log('submit')
   }
 
   
   return (
     <div className="create-item">
         <form onSubmit={handleSubmit} className='create-item-form'>
-            <button class="close-button" onClick={() => props.editPopup(false)}>X</button>
+            <button className="close-button" onClick={() => props.editPopup(false)}>X</button>
 
             <h2>Create new TODO item</h2>
             <label htmlFor="name">Name</label>
