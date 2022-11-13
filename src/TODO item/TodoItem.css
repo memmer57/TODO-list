@@ -9,6 +9,8 @@
 
     --edit-color: #425481;
     --edit-color-hover: #4660a4;
+
+    --popup-background: rgb(10, 10, 10);
 }
 
 
@@ -17,6 +19,7 @@
     background-color: rgb(10, 10, 10);
     padding: 1.4rem;
     border-radius: 2rem;
+    border: 2px solid var(--main-color);
     width: 40rem;
 }
 
@@ -50,4 +53,90 @@
 }
 .todo-buttons > #edit:hover {
     background-color: var(--edit-color-hover);
+}
+
+
+/* Create new item popup */
+.create-item {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.create-item > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+    padding: 0 1.5rem 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+}
+
+.create-item > form > input, .create-item > form > textarea {
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    font-family: inherit;
+    width: 30rem;
+    border: 3px solid var(--popup-background);
+}
+
+.create-item > form > textarea {
+    margin: 0.5rem 0;
+    height: 10rem;
+}
+
+.create-item > form > textarea:focus, .create-item > form > input:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.create-item > form > label {
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    font-family: inherit;
+    width: 30rem;
+}
+
+.create-item > form > h2 {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.create-item > form > button {
+    margin: 1rem 0;
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+
+.create-item > form > button:hover {
+    background-color: var(--main-color-hover);
+}
+
+.create-item > form > .close-button {
+    padding: 0;
+    position: relative;
+    right: -14.5rem;
+    display: block;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: center;
 }

@@ -48,11 +48,11 @@ header > * {
 
 header > button {
   margin-left: auto;
-  background-color: var(--edit-color);
+  background-color: var(--main-color);
   transition: var(--transition);
 }
 header > button:hover {
-  background-color: var(--edit-color-hover);
+  background-color: var(--main-color-hover);
 }
 
 button {
