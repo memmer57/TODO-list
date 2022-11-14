@@ -1,4 +1,5 @@
 import './TodoItem.css'
+import { useState } from 'react'
 
 function TodoItem(props) {
   console.log('test')
@@ -20,7 +21,7 @@ function TodoItem(props) {
       <p>{props.description}</p>
 
       <div className="todo-buttons">
-        <button id="done">Mark done</button>
+        <button onClick={() => deleteItem(props.itemIndex)} id="done">Mark done</button>
         <button id="edit">Edit</button>
         <button onClick={() => deleteItem(props.itemIndex)} id="delete">Delete</button>
       </div>

@@ -136,7 +136,11 @@
     border-radius: 50%;
     width: 3.5rem;
     height: 3.5rem;
-    line-height: 3rem;
+    line-height: 2rem;
     font-size: 2rem;
     text-align: center;
+}
+
+.create-item > form > textarea {
+    resize: none;
 }

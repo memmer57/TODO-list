@@ -1,4 +1,3 @@
-import './CreateItem.css'
 import App from '../App'
 import { useState } from 'react'
 
@@ -8,6 +7,10 @@ function CreateItem(props) {
 
   function handleSubmit(e) {
     e.preventDefault()
+
+    if (name == '') {
+      return
+    }
 
     // increment item count
     if (localStorage.getItem('0') === null) {
