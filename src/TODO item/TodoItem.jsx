@@ -2,7 +2,6 @@ import './TodoItem.css'
 import { useState } from 'react'
 
 function TodoItem(props) {
-  console.log('test')
   function deleteItem(key) {
     let nameKey = key + 'name'
     let descriptionKey = key + 'description'

@@ -115,7 +115,7 @@
     margin: 0.5rem 0 1.5rem 0;
 }
 
-.create-item > form > button {
+.create-item > form > .submit-button {
     margin: 1rem 0;
     padding: 0.9rem 1.5rem;
     border-radius: 0.5rem;
@@ -124,23 +124,42 @@
     transition: var(--transition);
 }
 
-.create-item > form > button:hover {
+.create-item > form > .submit-button:hover {
     background-color: var(--main-color-hover);
 }
 
-.create-item > form > .close-button {
+.close-button {
+    margin: 1.6rem 0 1rem;
     padding: 0;
     position: relative;
-    right: -14.5rem;
+    right: -13.5rem;
     display: block;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    line-height: 2rem;
-    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
     text-align: center;
+    background-color: var(--main-color);
+    transition: var(--transition);
+    border-radius: 50%;
+}
+.close-button:hover {
+    background-color: var(--main-color-hover);
 }
 
 .create-item > form > textarea {
     resize: none;
+}
+
+.close-button:before, .close-button:after {
+    position: absolute;
+    top: 1rem;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+}
+.close-button:before {
+    transform: rotate(45deg);
+}
+.close-button:after {
+    transform: rotate(-45deg);
 }

@@ -36,7 +36,7 @@ function CreateItem(props) {
   return (
     <div className="create-item">
         <form onSubmit={handleSubmit} className='create-item-form'>
-            <button className="close-button" onClick={() => props.editPopup(false)}>X</button>
+            <button className="close-button" onClick={() => props.editPopup(false)}></button>
 
             <h2>Create new TODO item</h2>
             <label htmlFor="name">Name</label>
@@ -45,7 +45,7 @@ function CreateItem(props) {
             <label htmlFor="description">Description</label>
             <textarea value={description} onChange={e => setDescription(e.target.value)} id="description" name="description" placeholder="Description" />
 
-            <button type="submit">Create</button>
+            <button type="submit" className='submit-button'>Create</button>
         </form>
     </div>
   )
