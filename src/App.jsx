@@ -11,6 +11,7 @@ function useForceUpdate(){
 
 function App() {
   const [popupVisibility, setPopupVisibility] = useState(false)
+  let isEmpty
   const forceUpdate = useForceUpdate()
 
   const editPopupVisibility = (e) => {
@@ -36,6 +37,12 @@ function App() {
     itemIndex.push(localStorage.getItem(indexKey))
   }
 
+  if (itemName.length == 0) {
+    isEmpty = true
+  } else {
+    isEmpty = false
+  }
+
   const itemList = itemName.map((name, index) => {
     return <TodoItem name={name} description={itemDescription[index]} key={index} itemIndex={itemIndex[index]} forceUpdate={forceUpdate}/>
   })
@@ -44,7 +51,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={reactLogo} className="App-logo" alt="logo" />
-        <h2>React TODO list</h2>
+        <h2 className='navbar-header'>React TODO list</h2>
 
         <button onClick={() => setPopupVisibility(!popupVisibility)}>Create new item</button>
         
@@ -53,6 +60,8 @@ function App() {
       {popupVisibility && <CreateItem editPopup={editPopupVisibility}/>}
 
       {itemList}
+
+      {isEmpty ? <p className="empty">There are no items, try creating one!</p> : null}
 
     </div>
   )

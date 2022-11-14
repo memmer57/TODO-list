@@ -163,3 +163,35 @@
 .close-button:after {
     transform: rotate(-45deg);
 }
+
+@media (max-width: 920px) {
+    html {
+      font-size: 14px !important;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    html {
+      font-size: 13px !important;
+    }
+
+    .todo-item {
+        width: 90%;
+    }
+
+    header {
+        display: block !important;
+    }
+
+    .App-logo {
+        margin-bottom: 0.2rem;
+    }
+
+    .navbar-header {
+        margin-bottom: 1rem;
+    }
+
+    header > button {
+        margin-right: 0;
+    }
+  }

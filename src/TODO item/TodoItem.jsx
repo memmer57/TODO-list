@@ -21,8 +21,6 @@ function TodoItem(props) {
 
       <div className="todo-buttons">
         <button onClick={() => deleteItem(props.itemIndex)} id="done">Mark done</button>
-        <button id="edit">Edit</button>
-        <button onClick={() => deleteItem(props.itemIndex)} id="delete">Delete</button>
       </div>
     </div>
   )
